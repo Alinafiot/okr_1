@@ -11,7 +11,7 @@ body {
 
 h1, h2, h3 {
     font-family: Constantia, serif;
-    color: rgb(127, 36, 56) !important;
+    color: rgb(127, 36, 56);
     text-align: center;
 }
 
@@ -43,7 +43,7 @@ h1, h2, h3 {
 
 a {
     font-size: 25px;
-    color: rgb(255, 77, 0)  ; 
+    color: rgb(255, 77, 0) !important; 
     text-decoration: none;
     font-weight: bold;
 }
@@ -81,11 +81,9 @@ td {
     background-color: #bf9661d1;
 }
 
-
 ul {
     list-style-type: square;
     padding: 10px;
-
     border-bottom: 4px solid darkred;
 }
 
