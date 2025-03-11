@@ -11,7 +11,7 @@ body {
 
 h1, h2, h3 {
     font-family: Constantia, serif;
-    color: rgb(127, 36, 56);
+    color: rgb(127, 36, 56) !important;
     text-align: center;
 }
 
@@ -45,23 +45,23 @@ h3 {
     font-weight: bold;
     color: #c75a5a;
     text-align: left;
+     background-color: black;
 }
 
-#schedule {
+#home {
     font-size: 30px;
     font-weight: bold;
     color: #c75a5a;
     text-align: left;
 }
 
-
-
 a {
     font-size: 25px;
-    color: rgb(255, 77, 0);
+    color: rgb(255, 77, 0) !important ; 
     text-decoration: none;
     font-weight: bold;
 }
+
 
 table {
     width: 100%;
