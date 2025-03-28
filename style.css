@@ -109,3 +109,35 @@ dl dd {
     margin-left: 20px;
     color: #000000;
 }
+
+
+i + b {
+    color: rgb(185, 25, 25);
+}
+
+b + tt {
+color: rgb(99, 155, 181);
+}
+
+tt + i {
+    color:  rgb(99, 155, 181); 
+}
+
+.info p {
+    color: darkred;
+    font-size: 18px;
+}
+
+.text b{
+    color: darkred ;
+}
+
+div > p {
+    font-family: Times, serif;
+}
+
+b > i {
+    text-decoration: underline;
+}
+
+
