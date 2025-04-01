@@ -15,10 +15,8 @@ h1, h2, h3 {
     text-align: center;
 }
 
-.navigation{
-    background-color: black;
-  
-}
+
+
 
 .service{
     background-color: rgb(127, 36, 56);
@@ -35,6 +33,7 @@ h1, h2, h3 {
 }
 
 #home {
+    margin-top: 10%;
     font-size: 30px;
     font-weight: bold;
     color: #c75a5a;
@@ -43,7 +42,7 @@ h1, h2, h3 {
 
 a {
     font-size: 25px;
-    color: rgb(255, 77, 0) !important; 
+    color: rgb(79, 55, 47) !important; 
     text-decoration: none;
     font-weight: bold;
 }
@@ -132,6 +131,9 @@ tt + i {
     color: darkred ;
 }
 
+
+
+
 div > p {
     font-family: Times, serif;
 }
@@ -140,4 +142,28 @@ b > i {
     text-decoration: underline;
 }
 
+.lists{
+    margin: 80px;
+}
 
+.lists p {
+    font-size: 25px;
+    text-align: center;
+    color: rgb(127, 36, 56);
+    background-color: #000000;
+}
+
+.highlight {
+    color: darkred;
+    font-weight: bold;
+ }
+
+
+ .navigation{
+    background-color:#be986d ;
+    position: fixed;
+    right: 5%;
+
+ }
+
+ 
