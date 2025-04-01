@@ -109,6 +109,9 @@ dl dd {
     color: #000000;
 }
 
+h3 + p {
+   color: #c75a5a;
+}
 
 i + b {
     color: rgb(185, 25, 25);
@@ -131,16 +134,21 @@ tt + i {
     color: darkred ;
 }
 
-
-
-
-div > p {
+tr > td {
+    color: darkred ;
     font-family: Times, serif;
+}
+
+tr > th {
+    color: brown ;
 }
 
 b > i {
     text-decoration: underline;
 }
+
+
+
 
 .lists{
     margin: 80px;
