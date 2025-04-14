@@ -15,9 +15,6 @@ h1, h2, h3 {
     text-align: center;
 }
 
-
-
-
 .service{
     background-color: rgb(127, 36, 56);
     font-size: 30px;
@@ -27,24 +24,39 @@ h1, h2, h3 {
 #menu {
     font-size: 30px;
     font-weight: bold;
-    color: #c75a5a;
     text-align: left;
     background-color: black;
 }
 
 #home {
-    margin-top: 10%;
+
     font-size: 30px;
     font-weight: bold;
-    color: #c75a5a;
     text-align: left;
 }
 
 a {
-    font-size: 25px;
-    color: rgb(79, 55, 47) !important; 
-    text-decoration: none;
+    font-size: 25px; 
     font-weight: bold;
+    text-decoration: none;
+}
+
+a:link {
+    color: darkred;
+}
+
+a:visited {
+    color: rgb(41, 29, 29);
+}
+
+a:hover {
+    color: rgb(196, 175, 135); 
+    text-decoration: underline; 
+}
+
+a:active {
+    color: red; 
+    font-weight: bold; 
 }
 
 
@@ -169,9 +181,38 @@ b > i {
 
  .navigation{
     background-color:#be986d ;
-    position: fixed;
-    right: 5%;
+    position: static;
+    right: 25%;
 
  }
 
- 
+ .floating-block {
+    float: right; 
+    padding: 10px;
+  }
+
+  ul li:first-child {
+    color: green;
+}
+
+.text p:first-child {
+    background-color: #8e856d;
+  }
+  
+h1::after {
+    content: " ✨";
+    color: orange;
+}
+
+h1::before {
+    content: " ✨";
+    color: orange;
+}
+
+li::before{
+    content: "\27A4";
+}
+
+  
+  
+
