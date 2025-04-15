@@ -29,7 +29,7 @@ h1, h2, h3 {
 }
 
 #home {
-
+    margin-top: 10%;
     font-size: 30px;
     font-weight: bold;
     text-align: left;
@@ -40,25 +40,6 @@ a {
     font-weight: bold;
     text-decoration: none;
 }
-
-a:link {
-    color: darkred;
-}
-
-a:visited {
-    color: rgb(41, 29, 29);
-}
-
-a:hover {
-    color: rgb(196, 175, 135); 
-    text-decoration: underline; 
-}
-
-a:active {
-    color: red; 
-    font-weight: bold; 
-}
-
 
 table {
     width: 100%;
@@ -159,9 +140,6 @@ b > i {
     text-decoration: underline;
 }
 
-
-
-
 .lists{
     margin: 80px;
 }
@@ -173,7 +151,10 @@ b > i {
     background-color: #000000;
 }
 
-.highlight {
+
+
+
+span {
     color: darkred;
     font-weight: bold;
  }
@@ -181,17 +162,39 @@ b > i {
 
  .navigation{
     background-color:#be986d ;
-    position: static;
+    position: fixed;
     right: 25%;
 
  }
 
- .floating-block {
+ .books-text{
+ position: static;
+ }
+
+ a:link {
+    color: darkred;
+}
+
+a:visited {
+    color: rgb(41, 29, 29);
+}
+
+a:hover {
+    color: rgb(196, 175, 135); 
+    text-decoration: underline; 
+}
+
+a:active {
+    color: red; 
+    font-weight: bold; 
+}
+
+.floating-block {
     float: right; 
     padding: 10px;
   }
 
-  ul li:first-child {
+ul li:first-child {
     color: green;
 }
 
