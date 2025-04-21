@@ -163,12 +163,8 @@ span {
  .navigation{
     background-color:#be986d ;
     position: fixed;
-    right: 25%;
+    right: 30%;
 
- }
-
- .books-text{
- position: static;
  }
 
  a:link {
@@ -215,7 +211,5 @@ h1::before {
 li::before{
     content: "\27A4";
 }
-
-  
-  
+ 
 
