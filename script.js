@@ -21,7 +21,6 @@ function userDialog() {
     while (!wantsToContinue) {
         wantsToContinue = confirm("Можливо, все ж таки продовжимо?");
     }
-
     alert(`Дякуємо, ${name}, що залишаєтесь з нами!`);
 
 }
@@ -51,12 +50,11 @@ userDialog();
 showDeveloperInfo("Боднарчук", "Аліна"); 
 compareBooks("Сяйво", "Воно");
 
-
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("schedule").innerHTML = "Оновлений розклад";
+
 });
 
-//  Використання querySelectorAll: змінити всі .highlight
 const highlightedItems = document.querySelectorAll(".highlight");
 highlightedItems.forEach((el, books) => {
   el.textContent = `🔸 ${el.textContent}`;

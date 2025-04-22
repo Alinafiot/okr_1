@@ -67,12 +67,11 @@
       // Створення елемента через createElement та текстового вузла
       let infoDiv = document.createElement("div");
       let infoText = document.createTextNode("Акційна пропозиція: друга кава зі знижкою 50%!");
-      infoDiv.append(infoText); // додаємо текст у div
+      infoDiv.append(infoText); 
       infoDiv.style.border = "2px dashed brown";
       infoDiv.style.padding = "10px";
       infoDiv.style.marginTop = "10px";
     
-      // Додаємо елемент у кінець body
       document.body.append(infoDiv);
     
       //  Використання prepend – додаємо повідомлення на початок body
@@ -101,10 +100,6 @@
         }
       });
     
-      //  cloneNode – копіюємо промо-блок і змінюємо текст
-      let promoClone = promo.cloneNode(true);
-      promoClone.innerText = "🎁 Отримай безкоштовне печиво до кави!";
-      document.body.append(promoClone);
     </script>
     
 
