@@ -56,12 +56,16 @@
         <td >Перерва на обід: 13:00-14:00</td>
       </tr>
    </table>
+   
+   <button onclick="handleClickAttr()">Зв'язатися</button>
+   <button id="contactBtn">Зв'язатися через властивість</button>
+
+   <input type="button" data-counter value="0">
+   <button data-toggle-id="toggleInfo">Показати/Приховати інформацію</button>
+   <div id="toggleInfo" hidden>Секретна інформація про каву :)</div>
 
 
-  <script src="script.js"></script>
- <script>
-   alert(table.outerHTML);
- </script>
+  <script src="script.js" defer></script>
 
 </body>
 </html>

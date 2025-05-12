@@ -5,7 +5,7 @@
    <meta name="description" content="Друга сторінка">
    <title>Каталог книг</title>
    <link rel="stylesheet"  href="style.css">
-   
+
 </head>
 <body >
     <h1>Книги та автори</h1> 
@@ -49,35 +49,58 @@
  <div class="lists">
 
    <p id="books">Список новинок</p>
-   <ul>
-      <li type="square"><span class="highlight">'Сяйво'</span> - Стівен Кінг</li>
-      <li type="square"><span class="highlight">'Ніч в Лісабоні'</span> - Еріх Марія Ремарк</li>
-      <li type="square"><span class="highlight">'Двійник'</span> - Тесс Геррітсен</li>
+   <ul >
+      <li type="square">'Сяйво' - Стівен Кінг</li>
+      <li type="square">'Ніч в Лісабоні' - Еріх Марія Ремарк</li>
+      <li type="square">'Двійник' - Тесс Геррітсен</li>
   </ul>
 
   <p>Популярні автори</p>
 
-  <ol>
-      <li type="I"><span class="highlight">Агата Крісті</span></li>
-      <li type="I"><span class="highlight">Стівен Кінг</span></li>
-      <li type="I"><span class="highlight">Тарас Шевченко</span></li>
+  <ol id="styleList">
+    <li>Агата Крісті</li>
+    <li>Стівен Кінг</li>
+    <li>Тарас Шевченко</li>
   </ol>
+
  
   <p>Жанри тижня</p>
-  <dl>
-      <dt><span class="highlight">Триллер</span></dt>
+   <dl >
+      <dt><span >Триллер</span></dt>
       <dd>Для любителів полоскотати свої нерви</dd>
-      <dt><span class="highlight">Романтика</span></dt>
+      <dt><span >Романтика</span></dt>
       <dd>Для тих, хто любить милі історії</dd>
-      <dt><span class="highlight">Детектив</span></dt>
+      <dt><span >Детектив</span></dt>
       <dd>Для розумників та розумниць</dd>
-  </dl>
+   </dl>
 </div>
 
    <a href="https://buki.com.ua/news/literature-genres/" 
    target="_blank">Які є жанри літератури?</a>
 
-   <script src="script.js"></script>
+   <script > 
+      let selectedLi;
+      let list = document.getElementById("styleList");
+
+       list.onclick = function(event) {
+         let target = event.target.closest('li');
+
+         if (!target) return;
+         if (!list.contains(target)) return; 
+
+         highlight(target);
+      };
+
+      function highlight(li) {
+        if (selectedLi) {
+          selectedLi.classList.remove("highlight");
+         }
+
+       selectedLi = li;
+       selectedLi.classList.add("highlight");
+      }
+
+   </script>
     
 </body>
 </html>

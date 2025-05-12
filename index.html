@@ -5,7 +5,7 @@
    <meta name="description" content="Перша сторінка">
    <title>Головна</title>
    <link rel="stylesheet"  href="style.css">
-   <script src="script.js"></script>
+
 </head>
 <body >
 
@@ -91,13 +91,13 @@
     </tr>
 
     <tr>
-      <td align="center" rowspan="2">Четвер-П'ятниця</td>
+      <td align="center"rowspan="2" >Четвер</td>
       <td align="center">Кава, капучино</td>
       <td align="center">Печиво, торти</td>
     </tr>
 
     <tr>
-      
+
       <td align="center">Кава, латте</td>
       <td align="center" rowspan="2">Пиріжки, кекси</td>
     </tr>
@@ -123,6 +123,44 @@
       <p><b>Для наших гостей ми пропонуємо знижки</b> на книги при замовленні напоїв.</p>
       <p><i>Чекаємо вас щодня!</i></p>
   </div>
-  <script src="script.js" defer></script>
+
+  <h3>Інформація про нас</h3>
+   <div id="booksMenu">
+      <button data-action="location">Локація</button>
+      <button data-action="schedule">Години роботи</button>
+      <button data-action="contacts">Контакти</button>
+   </div>
+
+
+   
+
+<script>
+      class BooksMenu {
+        constructor(elem) {
+          this._elem = elem;
+          elem.onclick = this.onClick.bind(this);
+        }
+      
+       location() {
+        alert("Наша адреса: вул. Київська, 12, м. Київ");
+       }
+  
+       schedule() {
+        alert("Книгарня працює з Пн по Пт з 9:00 до 20:00");
+       }
+  
+       contacts() {
+        alert("Телефон: +380999999999");
+       }
+      
+        onClick(event) {
+          let action = event.target.dataset.action;
+          if (action && typeof this[action] === "function") {
+            this[action]();
+          }
+        }
+      }
+      new BooksMenu(document.getElementById("booksMenu"));
+    </script>
 </body>
 </html>

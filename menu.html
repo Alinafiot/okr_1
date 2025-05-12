@@ -67,40 +67,36 @@
       // Створення елемента через createElement та текстового вузла
       let infoDiv = document.createElement("div");
       let infoText = document.createTextNode("Акційна пропозиція: друга кава зі знижкою 50%!");
-      infoDiv.append(infoText); 
       infoDiv.style.border = "2px dashed brown";
       infoDiv.style.padding = "10px";
       infoDiv.style.marginTop = "10px";
     
       document.body.append(infoDiv);
     
-      //  Використання prepend – додаємо повідомлення на початок body
+      // додаємо повідомлення на початок body
       let promo = document.createElement("p");
       promo.innerText = "🔥 Новинка тижня: лавандовий раф!";
       promo.style.color = "purple";
       document.body.prepend(promo);
     
-      //  after – додаємо елемент після <h2 id="menu">
+      // додаємо елемент після <h2 id="menu">
       let afterMenu = document.createElement("div");
       afterMenu.innerHTML = "<p style='color:green;'>🥐 Спробуйте наші нові круасани!</p>";
       let menuHeader = document.getElementById("menu");
       menuHeader.after(afterMenu);
     
-      //  replaceWith – замінюємо iframe на інше повідомлення
+      //замінюємо iframe на інше повідомлення
       let iframe = document.querySelector("iframe");
       let replacement = document.createElement("div");
       replacement.innerHTML = "<p><strong>Замість вікіпедії — кращі кавові поради прямо тут!</strong></p>";
       iframe.replaceWith(replacement);
-    
-      //  remove – видаляємо старе посилання  на vivat
-      let allLinks = document.querySelectorAll("a");
-      allLinks.forEach(link => {
-        if (link.href.includes("vivat.com.ua")) {
-          setTimeout(() => link.remove(), 1000); 
-        }
-      });
+
+      setTimeout(() => {
+      replacement.remove();
+       }, 10000);
     
     </script>
+    
     
 
 </body>
