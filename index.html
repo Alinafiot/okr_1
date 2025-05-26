@@ -131,8 +131,8 @@
       <button data-action="contacts">Контакти</button>
    </div>
 
-
-   
+   <div id="dragItem">📕</div>
+   <div id="dropTarget">Перетягни сюди, щоб отримати знижку!</div>
 
 <script>
       class BooksMenu {
@@ -161,6 +161,89 @@
         }
       }
       new BooksMenu(document.getElementById("booksMenu"));
+
+
+
+      const cells = document.querySelectorAll('td, th');
+
+      cells.forEach(cell => {
+      cell.addEventListener('mouseover', function(event) {
+        const target = event.target;
+        if (target.tagName === 'TD' || target.tagName === 'TH') {
+          target.classList.add('highlight');
+        }
+      });
+
+      cell.addEventListener('mouseout', function(event) {
+        const target = event.target;
+        const related = event.relatedTarget;
+
+        // Перевірка, чи миша пішла з поточної комірки, а не на інший внутрішній елемент
+        if (!target.contains(related)) {
+          target.classList.remove('highlight');
+        }
+      });
+    });
+
+
+    const dragItem = document.getElementById('dragItem');
+    const dropTarget = document.getElementById('dropTarget');
+
+    let shiftX, shiftY;
+
+    dragItem.onmousedown = function(event) {
+      shiftX = event.clientX - dragItem.getBoundingClientRect().left;
+      shiftY = event.clientY - dragItem.getBoundingClientRect().top;
+
+      dragItem.style.position = 'absolute';
+      dragItem.style.zIndex = 1000;
+      document.body.append(dragItem);
+
+      function moveAt(pageX, pageY) {
+        dragItem.style.left = pageX - shiftX + 'px';
+        dragItem.style.top = pageY - shiftY + 'px';
+      }
+
+      moveAt(event.pageX, event.pageY);
+
+      function onMouseMove(event) {
+        moveAt(event.pageX, event.pageY);
+
+        dragItem.hidden = true;
+        let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
+        dragItem.hidden = false;
+
+        if (!elemBelow) return;
+
+        if (elemBelow === dropTarget || dropTarget.contains(elemBelow)) {
+          dropTarget.classList.add('highlight');
+        } else {
+          dropTarget.classList.remove('highlight');
+        }
+      }
+
+      document.addEventListener('mousemove', onMouseMove);
+
+      dragItem.onmouseup = function() {
+        document.removeEventListener('mousemove', onMouseMove);
+        dragItem.onmouseup = null;
+
+        if (dropTarget.classList.contains('highlight')) {
+          dropTarget.classList.remove('highlight');
+          dropTarget.appendChild(dragItem);
+          dragItem.style.left = '0';
+          dragItem.style.top = '0';
+          alert('Ви отримали знижку -50%');
+        }
+      };
+    };
+
+    dragItem.ondragstart = function() {
+      return false;
+    };
+
+   
+ 
     </script>
 </body>
 </html>

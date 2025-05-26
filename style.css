@@ -219,7 +219,7 @@ li::before{
 }
 
 .highlight {
-    background-color: #907a66;
+    background-color: rgba(123, 39, 39, 0.293);
     font-weight: bold;
     color: #2d3436;
 }
@@ -256,3 +256,39 @@ li::before{
   transform: translateY(1px); 
 }
 
+#dragItem {
+      position: absolute;
+      top: 150px;
+      left: 20px;
+      width: 80px;
+      height: 100px;
+      background-color: brown;
+      color: white;
+      font-size: 40px;
+      text-align: center;
+      line-height: 100px;
+      border-radius: 8px;
+      cursor: grab;
+    }
+
+    #dropTarget {
+      position: absolute;
+      top: 140px;
+      right: 40px;
+      width: 150px;
+      height: 150px;
+      border: 3px dashed brown;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #916c6c;
+      transition: 0.3s;
+    }
+
+    #dropTarget.highlight {
+      background-color: #d66a6a;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+  

@@ -89,7 +89,7 @@ contactButton.addEventListener("click", secondHandler);
 
 let objectHandler = {
     handleEvent(event) {
-        alert("Напишіть нам у приватні повідомлення в інстаграм! (через обробник-об'єкт)");
+        alert("Наразі ми не можемо Вам відповісти (через обробник-об'єкт)");
         alert(`Елемент, на якому спрацював обробник: ${event.currentTarget}`);
 
     }
@@ -98,7 +98,7 @@ contactButton.addEventListener("click", objectHandler);
 
 setTimeout(() => {
     contactButton.removeEventListener("click", firstHandler);
-    alert("Третє повідомлення було видалено через 10 секунд");
+    alert("Перший обробник було видалено за 10 секунд");
 }, 10000);
 
 
