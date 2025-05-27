@@ -132,7 +132,7 @@
    </div>
 
    <div id="dragItem">📕</div>
-   <div id="dropTarget">Перетягни сюди, щоб отримати знижку!</div>
+   <div id="dropTarget">Перетягни сюди книжечку, щоб отримати знижку!</div>
 
 <script>
       class BooksMenu {
@@ -177,8 +177,6 @@
       cell.addEventListener('mouseout', function(event) {
         const target = event.target;
         const related = event.relatedTarget;
-
-        // Перевірка, чи миша пішла з поточної комірки, а не на інший внутрішній елемент
         if (!target.contains(related)) {
           target.classList.remove('highlight');
         }
@@ -242,8 +240,6 @@
       return false;
     };
 
-   
- 
     </script>
 </body>
 </html>
